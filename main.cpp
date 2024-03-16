@@ -11,8 +11,10 @@ int main(){
     int Balls_count;
     int result=0;
     bool a=true;
-    cout<<"Answer is "<<endl;
+
     ans=util();
+    cout<<"Answer is "<<ans<<endl;
+    
     while(a==true){
     result=game(ans,&Strikes_count,&Balls_count);
     if(result==1){
