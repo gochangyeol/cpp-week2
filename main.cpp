@@ -10,19 +10,23 @@ int main(){
     int Strikes_count;
     int Balls_count;
     int result=0;
+    int count=5;
     bool a=true;
-
     ans=util();
-    cout<<"Answer is "<<ans<<endl;
-    
     while(a==true){
-    result=game(ans,&Strikes_count,&Balls_count);
-    if(result==1){
-        cout<<"You win!";
-        a=false;
+        if(count==0){
+            cout<<"You lose!"<<endl;
+            a=false;
+        }
+        cout<<count<<" chance left."<<endl;
+        result=game(ans,&Strikes_count,&Balls_count);
+        if(result==1){
+            cout<<"You win!";
+            a=false;
     }
     else
         cout<<"Strikes: "<<Strikes_count<<", Balls: "<<Balls_count<<endl;
+        count--;
     }
 }
 
