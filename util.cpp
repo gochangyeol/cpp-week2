@@ -1,9 +1,10 @@
 #include<iostream>
 #include<random>
+#include<chrono>
 using namespace std;
 int util(){
-    random_device rd;
-    mt19937 gen(rd());
+    unsigned seed= chrono::system_clock::now().time_since_epoch().count();
+    mt19937 gen(seed);
     uniform_int_distribution<int>
     distribution(0,9);
 
