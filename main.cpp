@@ -17,6 +17,7 @@ int main(){
         if(count==0){
             cout<<"You lose!"<<endl;
             a=false;
+            break;
         }
         cout<<count<<" chance left."<<endl;
         result=game(ans,&Strikes_count,&Balls_count);
