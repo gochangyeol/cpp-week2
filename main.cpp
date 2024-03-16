@@ -1,5 +1,6 @@
 #include<iostream>
 int game(int ans, int *Strikes_count, int *Balls_count);
+int util();
 
 using namespace std;
 
@@ -10,8 +11,8 @@ int main(){
     int Balls_count;
     int result=0;
     bool a=true;
-    cout<<"Enter a answer: "<<endl;
-    cin>>ans;
+    cout<<"Answer is "<<endl;
+    ans=util();
     while(a==true){
     result=game(ans,&Strikes_count,&Balls_count);
     if(result==1){
